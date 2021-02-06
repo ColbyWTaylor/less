@@ -18,12 +18,11 @@ h3 {
 }
 .primary-btn {
   background: #3b5998;
-  color: #fff;
-  border-radius: 10px;
+  color: white;
 }
 ul#menu {
   list-style: none;
-  background-color: #ffffff;
+  background-color: #57e1d9;
 }
 ul#menu li {
   padding: 10px 0;

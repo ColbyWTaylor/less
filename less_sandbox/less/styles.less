@@ -1,8 +1,19 @@
+// LESS Variables
 @background-color: #f4f4f4;
 @font-family: Tahoma;
 @primary-color: #3b5998;
 @secondary-color: #20b2aa;
 @line-height: 1em + 1em;
+
+// Text Color Mixin
+
+.text-color(@a) when (lightness(@a) >= 50%) {
+  color: black;
+}
+
+.text-color(@a) when (lightness(@a) < 50%) {
+  color: white;
+}
 
 body {
   font-family: @font-family;
@@ -26,13 +37,14 @@ h3 {
 
 .primary-btn:extend(.btn) {
   background: @primary-color;
-  color: #fff;
-  .border-radius(10px);
+  .text-color(@primary-color);
+  //   color: #fff;
+  //   .border-radius(10px);
 }
 
 ul#menu {
   list-style: none;
-  background-color: lighten(@secondary-color, 90%);
+  background-color: lighten(@secondary-color, 20%);
   li {
     padding: 10px 0;
   }
